@@ -1,0 +1,21 @@
+# Config and Htaccess Files
+.htaccess
+config.php
+admin/config.php
+git
+
+# Flags
+# remove sharp char if you want to add flags to gitignore
+# flags/*
+
+
+# IDE Project files
+.idea/*
+
+node_modules/*
+
+wordpress/wp-content/themes/twentyseventeen/*
+wordpress/wp-content/themes/twentyfifteen/*
+wordpress/wp-content/themes/twentysixteen/*
+wordpress/wp-content/uploads/*
+wordpress/wp-config.php

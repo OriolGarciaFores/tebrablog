@@ -1,0 +1,18 @@
+/*
+Theme Name: TebraBlog
+Author: Tebrase
+Description: Plantilla desarrollada con bootstrap utilizando sass.
+Version: 0.1
+License: GNU General Public License v2 or later
+Text Domain: tebrablog
+*/
+html {
+  font-size: 16px;
+}
+
+.banner{
+  overflow: hidden;
+  height: 90vh;
+  max-height: 100%;
+  background: url(../tebrablog/images/header.jpg) center top no-repeat fixed;
+}
