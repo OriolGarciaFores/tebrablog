@@ -1,0 +1,3 @@
+#: functions.php:17
+msgid "Top Menu"
+msgstr "Menú principal"

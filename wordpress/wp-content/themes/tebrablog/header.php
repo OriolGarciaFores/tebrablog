@@ -27,10 +27,18 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
-<header class="banner">
+<body <?php body_class(); ?>>
+<header id="banner" class="banner">
 <!-- PARALLAX -->
 </header>
-<nav>
-
+<nav class="navbar navbar-inverse navbar-fixed-top" <?php if (is_admin_bar_showing()) echo 'style="margin-top:32px;"' ?>>
+    <div class="container">
+        <?php wp_nav_menu(array(
+            'theme_location' => 'top',
+            'container' => 'div',
+            'container_class' => 'navbar-collapse collapse',
+            'menu_class' => 'nav navbar-nav'
+        )); ?>
+    </div>
 </nav>
+
