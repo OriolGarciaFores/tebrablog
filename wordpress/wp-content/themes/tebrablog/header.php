@@ -29,7 +29,19 @@
 </head>
 <body <?php body_class(); ?>>
 <header id="banner" class="banner">
-<!-- PARALLAX -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <?php if ( is_front_page() ||  is_archive()) : ?>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php elseif (is_single()): ?>
+                    <h1 class="site-title"><?php the_title(); ?></h1>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARALLAX -->
 </header>
 <nav class="navbar navbar-inverse navbar-fixed-top" <?php if (is_admin_bar_showing()) echo 'style="margin-top:32px;"' ?>>
     <div class="container">

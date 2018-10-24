@@ -6,6 +6,15 @@ Version: 0.1
 License: GNU General Public License v2 or later
 Text Domain: tebrablog
 */
+
+/* VARIABLES SASS */
+$text-gray : #9d9d9d;
+$text-black: #000000;
+
+/* MIXINS */
+@import "mixins";
+
+/* SASS */
 html {
   font-size: 16px;
 }
@@ -20,16 +29,66 @@ img{
   height: 90vh;
   max-height: 100%;
   background: url(../tebrablog/images/header.jpg) center top no-repeat fixed;
+  background-size: cover;
 }
 
+.page-content{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.site-title{
+  padding: 11em 0 11em;
+  text-align: center;
+  a{
+    @include text-shadow(2px, 2px, 4px, #000);
+    font-weight: bold;
+    @include font-size(60px);
+    color: white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+/* CATEGORIES - POST LIST */
 .archive{
   article{
     margin-top:10px;
     .img-thumbnail{
       padding: 0;
+      border: none;
+      &:hover{
+        box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
       .caption{
         padding: 8px;
+        background: #f1f3f5;
+        .entry-header{
+          text-align: center;
+          text-transform: uppercase;
+          color: $text-gray;
+        }
+        .entry-content{
+          color: $text-black;
+        }
       }
     }
+  }
+}
+
+/* POST */
+.single{
+  background: #f1f3f5;
+}
+
+/* FOOTER */
+footer{
+  background: $text-black;
+  .copyright{
+    color: $text-gray;
+    padding: 30px 0;
   }
 }

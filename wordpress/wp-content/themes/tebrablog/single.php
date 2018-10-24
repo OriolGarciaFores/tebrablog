@@ -29,7 +29,7 @@ get_header();
 </main>
 
 <script type="text/javascript">
-        document.getElementById('banner').setAttribute('style', 'background: url(<?php echo get_the_post_thumbnail_url(get_post()); ?>) center top no-repeat fixed; background-color:black;');
+        document.getElementById('banner').setAttribute('style', 'background: url(<?php echo get_the_post_thumbnail_url(get_post()); ?>) center top no-repeat fixed; background-color:black; background-size:cover;');
 </script>
 
 <?php get_footer(); ?>

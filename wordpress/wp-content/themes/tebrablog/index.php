@@ -6,9 +6,9 @@ $recent_posts = wp_get_recent_posts($args, ARRAY_A);
 ?>
     <section class="row">
         <header class="col-xs-12">
-            <h1 class="entry-title">
+            <h2 class="entry-title">
                 <strong>Last posts</strong>
-            </h1>
+            </h2>
         </header>
         <div class="col-md-12">
             <?php foreach ($recent_posts as $post) { ?>
@@ -20,9 +20,9 @@ $recent_posts = wp_get_recent_posts($args, ARRAY_A);
                         </div>
                     <div class="col-sm-5">
                         <div class="entry-header">
-                            <h2 class="entry-title">
+                            <h3 class="entry-title">
                                 <?php echo $post['post_title']; ?>
-                            </h2>
+                            </h3>
                         </div>
                         <div class="entry-content">
                             <?php echo tebrablog_get_the_excerpt($post['ID']); ?>
