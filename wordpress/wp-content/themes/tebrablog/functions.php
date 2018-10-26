@@ -29,3 +29,18 @@ function tebrablog_get_the_excerpt( $post_id = null, $num_words = 55 ) {
     $generated_excerpt = wp_trim_words( $text, $num_words );
     return apply_filters( 'get_the_excerpt', $generated_excerpt, $post );
 }
+
+//Register sidebars
+add_action('widgets_init', 'tebrablogWidgetsInit');
+
+function tebrablogWidgetsInit(){
+    register_sidebar(array(
+        'name' => __('Posts sidebar', 'tebrablog'),
+        'id' => 'sidebar-posts',
+        'description' => __('Widgets in this area will be shown on all posts.', 'tebrablog'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
+    ));
+}

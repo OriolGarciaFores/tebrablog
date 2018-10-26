@@ -15,12 +15,22 @@ get_header();
             while (have_posts()) : the_post();
                 ?>
                 <article <?php post_class(); ?>>
-                    <header class="entry-header">
-                        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-                    </header>
-                    <div class="entry-content">
-                        <?php the_content(); ?>
+                    <div class="row">
+                        <section class="col-sm-9">
+                            <header class="entry-header">
+                                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                            </header>
+                            <div class="entry-content">
+                                <?php the_content(); ?>
+                            </div>
+                        </section>
+                        <section class="col-sm-3">
+                            <?php if(is_active_sidebar('sidebar-posts')) {
+                            dynamic_sidebar('sidebar-posts');
+                             } ?>
+                        </section>
                     </div>
+
                 </article>
             <?php endwhile; ?>
         </div>
